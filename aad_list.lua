@@ -32,3 +32,4 @@ for i, file in ipairs(csv_files) do
     box.commit() -- конец коммита
   end
 end
+return box.space.speed2:len() -- показываем сколько записей после ввода данных
