@@ -41,3 +41,22 @@ box.space.speed:format({
 box.schema.sequence.create('id_speed',{min=1})
 -- привязываем счетчик к полю id в таблице
 box.space.speed:create_index('id',{ sequence = 'id_speed' })
+-- делаем индексы к поисковым полям
+box.space.speed:create_index('phone_in', { parts = { 'phone' }, type = 'tree', unique = false})
+box.space.speed:create_index('email_in', { parts = { 'email' }, type = 'tree', unique = false})
+box.space.speed:create_index('fio_in', { parts = { 'fio' }, type = 'tree', unique = false})
+box.space.speed:create_index('f_in', { parts = { 'f' }, type = 'tree', unique = false})
+box.space.speed:create_index('n_in', { parts = { 'n' }, type = 'tree', unique = false})
+box.space.speed:create_index('s_in', { parts = { 's' }, type = 'tree', unique = false})
+box.space.speed:create_index('fidor_in', { parts = { 'fidor' }, type = 'tree', unique = false})
+box.space.speed:create_index('pass_in', { parts = { 'pass' }, type = 'tree', unique = false})
+box.space.speed:create_index('grz_in', { parts = { 'grz' }, type = 'tree', unique = false})
+box.space.speed:create_index('vk_in', { parts = { 'vk' }, type = 'tree', unique = false})
+box.space.speed:create_index('vu_in', { parts = { 'vu' }, type = 'tree', unique = false})
+box.space.speed:create_index('tg_in', { parts = { 'tg' }, type = 'tree', unique = false})
+box.space.speed:create_index('tgid_in', { parts = { 'tgid' }, type = 'tree', unique = false})
+box.space.speed:create_index('fb_in', { parts = { 'fb' }, type = 'tree', unique = false})
+box.space.speed:create_index('inn_in', { parts = { 'inn' }, type = 'tree', unique = false})
+box.space.speed:create_index('firm_in', { parts = { 'firm' }, type = 'tree', unique = false})
+box.space.speed:create_index('base_in', { parts = { 'base' }, type = 'tree', unique = false})
+
